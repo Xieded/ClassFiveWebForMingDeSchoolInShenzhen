@@ -1,0 +1,2 @@
+# ClassFiveWebForMingDeSchoolInShenzhen
+这是一个我自己做的网站给深圳市明德外语实验学校 2024 届的初中五班
