@@ -1,4 +1,4 @@
-# ClassFiveWebForMingDeSchoolInShenzhen
+# ClassFiveWebForMingDeSchool
 这是一个我自己做的一个网站  
 给**深圳市明德外语实验学校 2024 届**的  
 **初中五班**  
