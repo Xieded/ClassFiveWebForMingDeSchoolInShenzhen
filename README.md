@@ -13,10 +13,10 @@
 1.学习语言----进行中  
 ~~	* 学习HTML5----已完成26/02/22  ~~
 	* 学习CSS3----进行中  
-    * 学习JavaScript
+    * 学习JavaScript  
 2 .开始构造网页
-	* 使用 HTML5 与 CSS3 构造框架
-    * 使用 CSS3 美化页面
-    * 制作一个留言板
+	* 使用 HTML5 与 CSS3 构造框架  
+    * 使用 CSS3 美化页面  
+    * 制作一个留言板  
 ## 网站跳转  
 目前的网站：**[点我！](https://www.classfive.dpdns.org)**
