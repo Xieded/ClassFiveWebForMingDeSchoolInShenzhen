@@ -1,4 +1,22 @@
-.title {
+.title#a {
     font-size: 6rem;
-    font-weight: bold;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.title#b {
+    font-size: 6rem;
+    font-weight: 100;
+    font-style: oblique 60deg;
+}
+
+div.para#p1 > div{
+    font-size: 1.5rem;
+    text-indent: 2em;
+    text-align: justify;
+}
+div.para#p1 > a {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: blueviolet;
 }
