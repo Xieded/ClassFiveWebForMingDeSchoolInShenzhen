@@ -1,3 +1,4 @@
-div#a {
-    font-family: 'Courier New', Courier, monospace;
+.title {
+    font-size: 6rem;
+    font-weight: bold;
 }
