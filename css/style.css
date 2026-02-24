@@ -1,31 +1,49 @@
-.title#a {
-    font-size: 4rem;
+div.title#a {
+    font-size: 7rem;
     font-weight: 900;
     font-style: italic;
     letter-spacing: 8px;
     white-space: pre;
     text-align: center;
+    background-image: url("assets/BlueSkyHor.jpg");
+    background-repeat: no-repeat;
+    background-size: 853px 639.5px;
+    background-position: center;
+    width: 853px;
+    height: 639.5px;
 }
 
-.title#b {
+div.title#b {
     font-size: 6rem;
     font-weight: 100;
     font-style: oblique 60deg;
     letter-spacing: 4px;
     white-space: pre;
-	text-align: center;
+    text-align: center;
 }
 
-div.para#p1 > div{
+div.para#p1 > div {
     font-size: 1.5rem;
     text-indent: 2em;
     text-align: justify;
     line-height: 1.8;
 }
-#pp1 {
-    font-size: 2rem;
-    text-decoration: underli;
+
+div.para#p1 div#pp2 {
+    text-indent: 0px;
+    font-size: 2.5rem;
+    color: red;
+    line-height: 2;
+    background: fixed yellow;
+    text-align: center;
+    width: min-content;
 }
+
+div.para#p1 > div > span#pp1 {
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
 div.para#p1 > a {
     font-size: 1.5rem;
     font-style: italic;
