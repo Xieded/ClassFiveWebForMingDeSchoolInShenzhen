@@ -14,7 +14,7 @@ div.title#a {
     letter-spacing: 8px;
     white-space: pre;
     text-align: center;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255,255,255,1);
 
     margin: 24px;
 }
@@ -26,21 +26,22 @@ div.title#b {
     letter-spacing: 4px;
     white-space: pre;
     text-align: center;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255,255,255,1);
 
     margin: 24px;
 }
 
 div.para#p1{
-	color: rgba(255,255,255,0.7);
+	color: rgba(0,0,0,1);
 
-    background: rgba(255,255,255,0.1) center;
-    background-size: cover;
+    background: rgba(255,255,255,1) center;
 
-    border: rgba(255,255,255,0.1) solid;
-    border-radius: 20px;
+    border: rgba(255,255,255,1) solid;
+    border-radius: 28px 28px 0px 0px;
 
-    margin: 40px;
+    height: 500px;
+
+    margin: 0px;
 
     padding: 16px 20px;
 }
@@ -59,7 +60,7 @@ div.para#p1 > div {
     width: 100%;
     height: 4px;
 
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(0,0,0,1);
 
     border: none;
 
@@ -77,7 +78,7 @@ div.para#p1 > a {
 
     line-height: 2;
 
-    color: rgba(255,255,255,1);
+    color: blueviolet;
     
     margin: auto;
 }
