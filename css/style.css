@@ -1,12 +1,35 @@
-
+/* 网站主体 */
 body {
     margin: 0;
     min-height: 100vh;
 }
 
-/* 网站主体 */
-
 /* 标准 */
+.tag {
+    display: inline;
+
+    font-size: 1.5rem;
+
+    color: rgba(0,0,0,1);
+    margin: 5px 20px;
+}
+
+.headBroad {
+    height: 40px;
+    width: 100%;
+
+    background-color: rgba(255,255,255,255.5);
+
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: inline;
+}
+
 .title {
     font-style: oblique 60deg;
 
@@ -23,7 +46,7 @@ body {
 
     text-align: left;
 
-    text-indent: 0px;
+    text-indent: 0;
 
     font-size: 3.5rem;
 
@@ -93,6 +116,8 @@ div#t22 {
 }
 
 .title#a {
+    margin-top: 50px;
+
     font-size: 5rem;
     font-weight: 900;
 
@@ -106,25 +131,6 @@ div#t22 {
 
     letter-spacing: 4px;
     
-}
-
-div.para#p1 > div.BaBo#inP1 {
-    position: absolute;
-
-    right: 0;
-    left: 0;
-    bottom: 0;
-    top: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background-color: rgba(255,255,255,0.2);
-    
-	border-radius: 48px;
-    border: none;
-
-    pointer-events: none;
 }
 
 div.para#p1 > a {
