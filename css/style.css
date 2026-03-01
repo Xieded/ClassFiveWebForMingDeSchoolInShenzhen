@@ -1,54 +1,33 @@
+
 body {
-    background-image: url("assets/BlueSkyHor.jpeg");
-    background-repeat: repeat-y;
-    background-size: cover;
-    background-position: top center;
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
 }
 
-div.title#a {
-    font-size: 5rem;
-    font-weight: 900;
-    font-style: italic;
-    letter-spacing: 8px;
-    white-space: pre;
-    text-align: center;
-    color: rgba(255,255,255,0.8);
+/* 网站主体 */
 
-    margin: 24px;
-}
-
-div.title#b {
-    font-size: 2rem;
-    font-weight: 100;
+/* 标准 */
+.title {
     font-style: oblique 60deg;
-    letter-spacing: 4px;
+
     white-space: pre;
+
     text-align: center;
-    color: rgba(255,255,255,0.8);
 
     margin: 24px;
+
+    color: rgba(255,255,255,0.8);
 }
+.title2 {
+    white-space: pre;
 
-div.para#p1{
-	color: rgba(255,255,255,0.7);
+    text-align: left;
 
-    background: rgba(255,255,255,0.1) center;
-    background-size: cover;
+    text-indent: 0px;
 
-    border: rgba(255,255,255,0.4) solid;
-    border-radius: 20px;
+    font-size: 3.5rem;
 
-    margin: 40px;
-
-    padding: 16px 20px;
-}
-div.para#p1 > div {
-    font-size: 1.5rem;
-    text-indent: 2em;
-    text-align: justify;
-    line-height: 1.8;
+    font-weight: 800;
 }
 
 .unLi {
@@ -59,31 +38,105 @@ div.para#p1 > div {
     width: 100%;
     height: 4px;
 
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.8);
 
     border: none;
 
     margin: 20px 0;
 }
 
-div.para#p1 > a {
-    font-size: 1.5rem;
-    font-style: italic;
+.context {
+    color: rgba(255,255,255,1);
 
+    font-size: 1.5rem;
+    text-indent: 2em;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+div.para#p1{
+    position: relative;
+
+    background: rgba(255,255,255,0.5) center;
+    background-size: cover;
+
+    border: rgba(255,255,255,0.5) solid;
+    border-radius: 20px;
+
+    margin: 40px;
+
+    padding: 16px 20px;
+}
+/* 细分 */
+
+div.mainBackBo {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url("assets/RiverMounHor.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    z-index: -1;
+}
+div#t21 {
+    color: rgba(255,255,255,1);
+}
+
+div#t22 {
+    color: rgba(255,255,255,1);
+}
+
+.title#a {
+    font-size: 5rem;
+    font-weight: 900;
+
+    letter-spacing: 8px;
+
+}
+
+.title#b {
+    font-size: 2rem;
+    font-weight: 100;
+
+    letter-spacing: 4px;
+    
+}
+
+div.para#p1 > div.BaBo#inP1 {
+    position: absolute;
+
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(255,255,255,0.2);
+    
+	border-radius: 48px;
+    border: none;
+
+    pointer-events: none;
+}
+
+div.para#p1 > a {
     display: block;
     width: fit-content;
 
-    text-decoration: solid;
+    font-size: 1.5rem;
 
+    font-style: italic;
     line-height: 2;
 
     color: rgba(255,255,255,1);
     
     margin: auto;
-}
-
-div.para#p1 > a > div {
-    display: inline-block;
-
-    text-decoration: solid;
 }
