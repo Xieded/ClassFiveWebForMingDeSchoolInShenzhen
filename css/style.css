@@ -9,7 +9,7 @@ body {
     height: 40px;
     width: 100%;
 
-    background-color: rgba(255,255,255,255.5);
+    background-color: rgba(255,255,255,0.5);
 
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -18,7 +18,15 @@ body {
     top: 0;
     left: 0;
 
-    display: inline;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill , minmax(0px , 1fr))
+
+    color: rgba(0,0,0,1);
+
+    font-size: 1.5rem;
+
+    z-index: 9;
 }
 
 .title {
@@ -91,6 +99,17 @@ body {
     grid-template-columns: repeat(auto-fill , minmax(200px , 1fr));
 }
 /* 细分 */
+div.headBroad#headBo > a{
+	margin: auto;
+
+    font-weight: 700;
+
+    font-family: 'Courier New', Courier, monospace;
+
+    text-decoration: none;
+
+    color: rgba(0,0,0,1);
+}
 div.backBroadOne#p1 {
     margin: 40px;
 }
@@ -148,4 +167,8 @@ div.backBroadOne#p1 > a {
     color: rgba(255,255,255,1);
     
     margin: auto;
+}
+
+div.gridBox > div.backBroadOne.first {
+    grid-column: 1 / -1;
 }
