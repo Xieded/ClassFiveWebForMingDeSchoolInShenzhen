@@ -18,9 +18,9 @@ body {
     top: 0;
     left: 0;
 
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: repeat(auto-fill , minmax(0px , 1fr))
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
 
     color: rgba(0,0,0,1);
 
@@ -90,25 +90,35 @@ body {
     padding: 16px 20px;
 }
 
-.gridBox {
+.chartList {
     display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(200px , 1fr));
 
     gap: 25px;
     margin: 40px;
-
-    grid-template-columns: repeat(auto-fill , minmax(200px , 1fr));
 }
 /* 细分 */
-div.headBroad#headBo > a{
-	margin: auto;
+nav.headBroad#headBo div{
+	display: flex;
+    align-items: center;
 
-    font-weight: 700;
+}
+nav div a svg {
+    position: relative;
+    bottom: 3px;
+}
+nav div a {
+	display: flex;
+    align-items: center;
+    gap: 8px;
+    
+    font-weight: 200px;
 
     font-family: 'Courier New', Courier, monospace;
 
     text-decoration: none;
 
-    color: rgba(0,0,0,1);
+    color: rgba(0,0,0,0.9);
 }
 div.backBroadOne#p1 {
     margin: 40px;
@@ -169,6 +179,6 @@ div.backBroadOne#p1 > a {
     margin: auto;
 }
 
-div.gridBox > div.backBroadOne.first {
+div.chartList > div.backBroadOne.first {
     grid-column: 1 / -1;
 }
