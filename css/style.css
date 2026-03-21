@@ -1,7 +1,80 @@
-
+:root {
+  --centerX:calc(max-width / 2);
+  --centerY:calc(max-height / 2)
+}
 
 body {
-    background-color: rgb(15, 20, 42);
+  background-color: rgb(15, 20, 42);
+  backgrund-image: radial-gradient(rgb(12,40,135),rgb(15,20,42));
+}
+
+.linkA {
+  text-decoration: none;
+  color: rgba(229, 231, 235, 0.9);
+}
+
+.headNav {
+  width: 100%;
+  height: 40px;
+
+  opacity: 0;
+
+  background-color: rgba(5, 10, 32,0.8);
+
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px ;
+
+  box-shadow: 0 8px 16px rgb(7, 12, 34);
+  
+  backdrop-filter: blur(8px);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+
+  animation-name: showNav;
+  animation-duration: .55s;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation-fill-mode: forwards;
+  animation-delay: .85s;
+
+  z-index: 8;
+  .navItem {
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		font-weight: 900;
+
+		color: rgba(240, 251, 255, 0.8);
+
+		display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+
+    padding: 8px 16px;
+
+		width: auto;
+    height: 24px;
+
+    background-color: rgba(9, 14, 36,0.9);
+
+    border: 1px rgb(15, 20, 42);
+    border-radius: 12px;
+
+    box-shadow: 0 0 8px rgb(8, 25, 40);
+
+    z-index: 10;
+
+    transition: all ;
+    transition-duration: 0.35s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 8px rgb(8, 25, 40);
+      color: rgb(12,80,165);
+    }
+  }
 }
 .welcomePage {
 	display: flex;
@@ -12,20 +85,22 @@ body {
 
   gap: 2px;
 
-  margin-top: 300px;
+  z-index: 1;
+
+  margin-top: 360px;
 
   .fiveClass {
     color: gold;
     text-shadow: 0 0 20px gold;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 900;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
 		opacity: 0;
 
     animation-name: showUp;
-    animation-duration: .3s;
+    animation-duration: .6s;
     animation-fill-mode: forwards;
-    animation-delay: 0.4s,1.4s;
+    animation-delay: 0.5s;
     animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
     
@@ -33,15 +108,15 @@ body {
 		position: relative;
     left: 60px;
     color: rgba(229, 231, 235, 0.9);
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 800;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 		opacity: 1;
 
 		animation-name: showUp, moveLeft;
-    animation-duration: 0.3s;
-    animation-delay: 0s, 0.35s;
+    animation-duration: 0.5s,0.4s;
+    animation-delay: 0s, 0.55s;
     animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55),ease-out;
     animation-fill-mode: forwards,forwards;
 	}
@@ -49,20 +124,20 @@ body {
 
 .titleMain {
   position: absolute;
-  top: 0;
+  top: 70px;
   left: 0;
   right: 0;
-
-  margin: auto;
 
   display: flex;
   justify-content: center;
 
   gap: 0px;
 
+  z-index: 1;
+
   .titleWord {
-		font-style: italic;
-    text-shadow: 4 4 6px grey;
+		font-style: oblique 60deg;
+    text-shadow: 4 4 6px rgb(8, 25, 40);
 
     font-size: 5rem;
 
@@ -91,13 +166,58 @@ body {
   }
 }
 
+.backBo {
+	position: relative;
+
+  z-index: -12;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .lightCircle {
+		position: absolute;
+    bottom: 10px;
+
+    height: 400px;
+    width: 400px;
+
+    background-image: radial-gradient(circle,rgb(12,45,125),rgb(15,20,42));
+
+    box-shadow: 0 0 64px rgb(12,45,125);
+
+    filter: blur(32px);
+
+    border-radius: 999px;
+
+    opacity: 0;
+
+    animation-name: fateOut,runAround;
+    animation-duration: 4s,8s;
+    animation-timing-function: ease,ease;
+    animation-delay: .4s,.4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1,infinite;
+  }
+}
+
+@keyframes showNav {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @keyframes showUpWord {
   0% {
-    transform: translateY(-100px);
+    transform: translateY(-170px);
     opacity: 0;
   }
   100% {
-    transform: translateY(150px);
+    transform: translateY(160px);
     opacity: 1;
   }
 }
@@ -108,19 +228,43 @@ body {
     opacity: 0;
   }
   100% {
-		transform: translateY(-40px);
+		transform: translateY(-60px);
     opacity: 1;
   }
 }
 
 @keyframes moveLeft {
   0% {
-    transform: translateY(-40px) translateX(0);
+    transform: translateY(-60px) translateX(0);
   }
   100% {
-    transform: translateY(-40px) translateX(-72px);
+    transform: translateY(-60px) translateX(-72px);
   }
 }
 
+@keyframes fateOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-
+@keyframes runAround {
+  0% {
+    transform: translate(0,0);
+  }
+  25% {
+    transform: translate(-50px,50px);
+  }
+  50% {
+    transform: translate(0,100px);
+  }
+  75% {
+    transform: translate(50px,50px);
+  }
+  100% {
+    transform: translate(0,0);
+  }
+}
