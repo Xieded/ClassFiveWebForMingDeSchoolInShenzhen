@@ -71,7 +71,7 @@ body {
 
     &.isIn {
       color: rgb(12,80,165);
-      box-shadow: 0 0 4px rgb(8, 25, 40);
+      box-shadow: 0 2px 6px rgb(8, 25, 40);
       
       &:hover {
         transform: translateY(0);
@@ -125,7 +125,7 @@ body {
 		opacity: 1;
 
 		animation-name: showUp, moveLeft;
-    animation-duration: 0.5s,0.35s;
+    animation-duration: 0.5s,0.4s;
     animation-delay: 0s, 0.55s;
     animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55),ease-out;
     animation-fill-mode: forwards,forwards;
