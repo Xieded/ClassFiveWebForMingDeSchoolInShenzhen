@@ -69,6 +69,16 @@ body {
     transition-duration: 0.35s;
     transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
+    &.isIn {
+      color: rgb(12,80,165);
+      box-shadow: 0 2px 6px rgb(8, 25, 40);
+      
+      &:hover {
+        transform: translateY(0);
+        border: 0 2px 6px rgb(8, 25, 40);
+      }
+    }
+
     &:hover {
       transform: translateY(-6px);
       box-shadow: 0 6px 8px rgb(8, 25, 40);
@@ -171,9 +181,34 @@ body {
 
   z-index: -12;
 
+  height: 100%;
+  width: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+	.starsky {
+  	background-image: url("../assets/StarSky.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:auto;
+
+    opacity: 0;
+
+    animation-name: showBackBo;
+    animation-duration: .8s;
+    animation-timing-function: ease;
+    animation-delay: .8s;
+    animation-fill-mode: forwards;
+
+ 	 	height: 100%;
+  	width: 100%;
+
+  	position: fixed;
+  	left: 0;
+  	top: 0;
+	}
 
   .lightCircle {
 		position: absolute;
@@ -192,7 +227,7 @@ body {
 
     opacity: 0;
 
-    animation-name: fateOut,runAround;
+    animation-name: fateOutCircle,runAround;
     animation-duration: 4s,8s;
     animation-timing-function: ease,ease;
     animation-delay: .4s,.4s;
@@ -200,6 +235,9 @@ body {
     animation-iteration-count: 1,infinite;
   }
 }
+
+
+
 
 @keyframes showNav {
   0% {
@@ -251,6 +289,15 @@ body {
   }
 }
 
+@keyframes fateOutCircle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
 @keyframes runAround {
   0% {
     transform: translate(0,0);
@@ -266,5 +313,14 @@ body {
   }
   100% {
     transform: translate(0,0);
+  }
+}
+
+@keyframes showBackBo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.2;
   }
 }
