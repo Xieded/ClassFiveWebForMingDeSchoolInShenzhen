@@ -2,7 +2,6 @@
   --centerX:calc(max-width / 2);
   --centerY:calc(max-height / 2)
 }
-
 body {
   background-color: rgb(15, 20, 42);
   backgrund-image: radial-gradient(rgb(12,40,135),rgb(15,20,42));
@@ -12,6 +11,51 @@ body {
   text-decoration: none;
   color: rgba(229, 231, 235, 0.9);
 }
+
+.gold-text {
+  /* 1. 核心：创建金渐变背景 */
+  background: linear-gradient(
+    135deg, 
+    #e6d399 0%,    /* 浅金高光 */
+    #d4af37 25%,   /* 主金色 */
+    #f7ef8a 50%,   /* 亮金 */
+    #b8941f 75%,   /* 暗金阴影 */
+    #a67c00 100%   /* 深金 */
+  );
+  
+  /* 2. 将背景仅应用于文字内部 */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* 3. 添加多层阴影创造立体感 */
+  text-shadow: 
+    0 1px 2px rgba(255, 215, 0, 0.2),  /* 金色辉光 */
+    0 0 20px rgba(183, 135, 0, 0.1);   /* 柔和外发光 */
+  
+  /* 4. 可选：添加光泽动画（悬停时） */
+  transition: all 0.3s ease;
+}
+
+/* 鼠标悬停时的光泽流动效果 */
+.gold-text:hover {
+  background: linear-gradient(
+    135deg, 
+    #f7ef8a 0%,    /* 调整渐变顺序产生流动感 */
+    #e6d399 25%,
+    #d4af37 50%,
+    #f7ef8a 75%,
+    #d4af37 100%
+  );
+  background-size: 200% 100%;  /* 背景放大实现动画 */
+  animation: shine 1.5s ease infinite;
+}
+
+@keyframes shine {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 
 .headNav {
   width: 100%;
