@@ -1,6 +1,6 @@
 :root {
   --centerX:calc(max-width / 2);
-  --centerY:calc(max-height / 2)
+  --centerY:calc(max-height / 2);
 }
 
 body {
@@ -261,7 +261,7 @@ body {
         animation-delay: .35s;
 
         &.headTe {
-          background-image: url("/assets/headTeacher.jpg");
+          background-image: url("/assets/headTeacher.webp");
           height: 300px;
           width: 300px;
         }
